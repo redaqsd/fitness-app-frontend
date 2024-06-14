@@ -7,7 +7,7 @@ function WorkoutContextProvider({children} : any) {
     useEffect(() => {
         async function fetchData () {
             try {
-                const response = await fetch("fitness-backend-2-lb271pk7v-redas-projects-55ebf154.vercel.app/api/v1/exercices")
+                const response = await fetch("https://fitness-backend-2.vercel.app/api/v1/exercices")
                 const result = await response.json()
                 setData(result.exercises)
             } catch (error) {
