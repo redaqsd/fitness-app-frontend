@@ -7,7 +7,7 @@ function WorkoutContextProvider({children} : any) {
     useEffect(() => {
         async function fetchData () {
             try {
-                const response = await fetch("https://fitness-app-backend-sigma.vercel.app")
+                const response = await fetch("http://localhost:3000/api/v1/exercices")
                 const result = await response.json()
                 setData(result.exercises)
             } catch (error) {
